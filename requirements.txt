@@ -9,4 +9,5 @@ mongoengine==0.29.1
 qdrant-client==1.16.1
 typing-extensions==4.15.0
 pydantic==2.12.5
-pymupdf4llm==1.26.7
+pymupdf4llm
+lxml==6.0.2

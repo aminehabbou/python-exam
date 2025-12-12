@@ -1,0 +1,29 @@
+services:
+  db:
+     image: mariadb:10.11
+     environment:
+         MARIADB_ROOT_PASSWORD: hello1
+         MARIADB_DATABASE: exampyth
+     ports:
+      - "3345:3306"
+     volumes:
+      - ./data/mariadb:/var/lib/mysql
+  mongodb:
+     image: mongodb:7.0
+     environment:
+         MONGO_INITDB_ROOT_PASSWORD: hello2
+         MONGO_INITDB_ROOT_USERNAME: username1
+         MONGO_INITDB_DATABASE: exampyth
+     ports:
+      - "27017:27017"
+     volumes:
+      - mongo-data:/data/db
+  qdrant:
+    image: qdrant/qdrant:v1.16
+    ports:
+      - "6359:6333"
+      - "6368:6334"
+    volumes:
+      - ./data/qdrant/qdrant/storage
+volumes:
+  mongo-data:
