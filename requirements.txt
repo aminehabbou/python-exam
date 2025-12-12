@@ -1,0 +1,12 @@
+pandas==2.3.3
+mypy==1.19.0
+ruff==0.14.9
+pre-commit==4.5.0
+numpy==2.3.5
+pymysql==1.1.2
+sqlalchemy==2.0.45
+mongoengine==0.29.1
+qdrant-client==1.16.1
+typing-extensions==4.15.0
+pydantic==2.12.5
+pymupdf4llm==1.26.7
